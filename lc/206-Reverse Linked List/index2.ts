@@ -1,4 +1,4 @@
-//迭代
+//iteration
 import ListNode from "../class/ListNode";
 function reverseList(head: ListNode | null): ListNode | null {
     if(!head||!head.next) return head
