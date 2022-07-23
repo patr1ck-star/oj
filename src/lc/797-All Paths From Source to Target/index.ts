@@ -17,3 +17,5 @@ const dfs = (i:number,path:number[],ans:number[][],graph: number[][])=>{
         path.pop()
     }
 }
+
+export default allPathsSourceTarget
