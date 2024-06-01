@@ -1,26 +1,29 @@
+import ListNode from '../class/ListNode';
 //iteration
-import ListNode from "../class/ListNode";
-function mergeTwoLists(list1: ListNode | null, list2: ListNode | null): ListNode | null {
-    let p:ListNode|null = list1
-    let q:ListNode|null = list2
-    const _head:ListNode = new ListNode(-1)
-    let cur:ListNode|null = _head
-    while(p&&q){
-        if(p.val<q.val){
-            cur.next = p
-            cur = cur.next
-            p = p.next
-        }else {
-            cur.next = q
-            cur = cur.next
-            q = q.next
+export default function mergeTwoLists(
+    list1: ListNode | null,
+    list2: ListNode | null
+): ListNode | null {
+    let p1 = list1;
+    let p2 = list2;
+    let newList: ListNode = new ListNode(-1);
+    let p = newList;
+    while (p1 && p2) {
+        if (p1.val < p2.val) {
+            p.next = p1;
+            p1 = p1.next;
+        } else {
+            p.next = p2;
+            p2 = p2.next;
         }
+        p = p.next;
     }
-    if(p){
-        cur.next = p
+
+    if (!p1) {
+        p.next = p2;
     }
-    if(q){
-        cur.next = q
+    if (!p2) {
+        p.next = p1;
     }
-    return _head.next
-};
+    return newList.next;
+}
