@@ -21,7 +21,11 @@
   },
   "homepage": "https://github.com/un-defined-name/oj#readme",
   "devDependencies": {
-    "cz-conventional-changelog": "^3.3.0"
+    "@eslint/js": "^9.5.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "^9.5.0",
+    "globals": "^15.5.0",
+    "typescript-eslint": "^7.13.0"
   },
   "config": {
     "commitizen": {
